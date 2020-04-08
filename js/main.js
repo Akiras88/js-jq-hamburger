@@ -10,10 +10,19 @@ var hamburgerButton = $('a .fa-bars');
 var hamburgerMenu = $('.hamburger-menu');
 var closeButton = $('a .fa-times');
 
-hamburgerButton.click(function () { 
-    hamburgerMenu.show('slow');    
-});
+hamburgerButton.click(showMenu);
 
-closeButton.click(function() {
+closeButton.click(hideMenu);
+
+
+// function show
+
+function showMenu() {
+    hamburgerMenu.show('slow'); 
+}
+
+// function hide
+
+function hideMenu() {
     hamburgerMenu.hide('slow');
-});
+}
